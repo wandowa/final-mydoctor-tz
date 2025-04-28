@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .header-gradient {
+    background: linear-gradient(90deg, #3182ce 0%, #38b2ac 100%);
+  }
+
+  .btn-primary {
+    @apply px-6 py-2 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 transition duration-300 shadow-one border border-green-600;
+  }
+
+  .top-bar-border {
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  #menu-toggle:checked ~ #menu {
+    @apply block;
+  }
+}
+/* <!-- Tailwind CSS Animation --> */
+        @keyframes infinite-slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        .animate-infinite-slide {
+            animation: infinite-slide 25s linear infinite;
+        }
+
+
+        /* <!-- Preloader Animations -->
+
+            /* Heartbeat Pulse Animation for Logo */
+            /* @keyframes pulse-heart {
+                0%, 100% { transform: scale(1); }
+                50% { transform: scale(1.1); }
+            }
+            .animate-pulse-heart {
+                animation: pulse-heart 1.5s infinite ease-in-out;
+            } */
+    
+            /* Heartbeat Line Animation */
+            /* @keyframes heartbeat {
+                0% { stroke-dasharray: 0 100; stroke-dashoffset: 0; }
+                50% { stroke-dasharray: 100 0; stroke-dashoffset: 0; }
+                100% { stroke-dasharray: 100 0; stroke-dashoffset: -100; }
+            }
+            .animate-heartbeat {
+                stroke-dasharray: 100;
+                animation: heartbeat 2s infinite linear;
+            } */
+    
+            /* Bounce Animation for Dots */
+            /* @keyframes bounce {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-10px); }
+            }
+            .animate-bounce {
+                animation: bounce 1s infinite;
+            }
+            .delay-0 { animation-delay: 0s; }
+            .delay-200 { animation-delay: 0.2s; }
+            .delay-400 { animation-delay: 0.4s; } */ 
+
+            /* <!-- Animation Styles on Portfolio --> */
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+  .animate-scroll {
+    animation: scroll 20s linear infinite;
+}
+    
+     
