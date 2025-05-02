@@ -33,7 +33,7 @@
                         <!-- Donation Options -->
                         <div>
                             <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Select Donation Amount</label>
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4"> 
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                 <label class="relative bg-gray-100 dark:bg-gray-700 p-4 rounded-md cursor-pointer hover:bg-green-50 dark:hover:bg-green-400 transition duration-300 border border-gray-300 dark:border-gray-600">
                                     <input type="radio" name="amount" value="50" class="absolute opacity-0 peer" required>
                                     <div class="text-center">

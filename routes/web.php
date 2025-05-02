@@ -52,3 +52,8 @@ Route::get('/booking', [BookingController::class, 'index'])->name('booking');
 Route::post('/booking/process', [BookingController::class, 'processPayment'])->name('booking.process');
 Route::get('/booking/success/{bookingId}', [BookingController::class, 'success'])->name('booking.success');
 Route::get('/booking/cancel/{bookingId}', [BookingController::class, 'cancel'])->name('booking.cancel');
+
+// Serve the sitemap
+Route::get('/sitemap.xml', function () {
+    return response()->file(public_path('sitemap.xml'));
+});

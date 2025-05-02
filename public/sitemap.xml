@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+    <url>
+    <loc>http://localhost</loc>
+    <lastmod>2025-05-02T11:23:38+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+            </url>
+    <url>
+    <loc>http://localhost/about-us</loc>
+    <lastmod>2025-05-02T11:23:38+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+            </url>
+    <url>
+    <loc>http://localhost/services</loc>
+    <lastmod>2025-05-02T11:23:38+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+            </url>
+    <url>
+    <loc>http://localhost/contact-us</loc>
+    <lastmod>2025-05-02T11:23:38+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+            </url>
+    <url>
+    <loc>http://localhost/booking</loc>
+    <lastmod>2025-05-02T11:23:38+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+            </url>
+    <url>
+    <loc>http://localhost/health-news</loc>
+    <lastmod>2025-05-02T11:23:38+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+            </url>
+    <url>
+    <loc>http://localhost/health-topics</loc>
+    <lastmod>2025-05-02T11:23:38+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+            </url>
+    <url>
+    <loc>http://localhost/blog</loc>
+    <lastmod>2025-05-02T11:23:38+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+            </url>
+    <url>
+    <loc>http://localhost/blog/Cancer Treatment Improvements in Tanzania</loc>
+    <lastmod>2025-03-31T06:18:38+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+            </url>
+    <url>
+    <loc>http://localhost/blog/Mental Health Awareness Rising in East Africa</loc>
+    <lastmod>2025-03-31T06:31:17+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+            </url>
+    <url>
+    <loc>http://localhost/blog/Obesity and Ultra-Processed Foods – A Major Public Health Concern</loc>
+    <lastmod>2025-03-31T06:40:39+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+            </url>
+    <url>
+    <loc>http://localhost/blog/Cholera Outbreak Worsens in Angola, Cases Exceed 8,500</loc>
+    <lastmod>2025-04-06T16:12:07+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+            </url>
+    <url>
+    <loc>http://localhost/blog/World Health Organization Africa (Brazzaville)</loc>
+    <lastmod>2025-04-06T17:03:45+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+            </url>
+    <url>
+    <loc>http://localhost/blog/World Health Organization (Geneva)</loc>
+    <lastmod>2025-04-06T16:27:49+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+            </url>
+    <url>
+    <loc>http://localhost/blog/Tanzania&#039;s Top Medical University Invites Indian Students For PG Programmes</loc>
+    <lastmod>2025-04-06T16:50:36+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+            </url>
+    <url>
+    <loc>http://localhost/blog/WHO</loc>
+    <lastmod>2025-04-08T18:27:50+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+            </url>
+</urlset>
