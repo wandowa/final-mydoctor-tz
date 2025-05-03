@@ -6,7 +6,7 @@
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center bg-gray-900 overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="{{ url('img/home-pic.jpg') }}" alt="Hospital Background" class="w-full h-full object-cover">
+            <img src="{{ url('img/booking.jpg') }}" alt="Hospital Background" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70"></div>
         </div>
         <div class="container mx-auto px-4 z-10 text-center">
