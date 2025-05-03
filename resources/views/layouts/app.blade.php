@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="MY DOCTOR offers high-quality healthcare services with a focus on patient care. Explore our services, book appointments, and more.">
-    <meta name="keywords" content="doctor, healthcare, medical services, appointment, healthcare services, patient care">
+    <meta name="keywords" content="doctor, mydoctor.tz, healthcare, medical services, appointment, healthcare services, patient care">
     <meta name="author" content="MY DOCTOR">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="MY DOCTOR | Your Health, Our Priority">
-    <meta property="og:description" content="MY DOCTOR provides professional healthcare services for your well-being. Book an appointment with trusted doctors.">
+    <meta property="og:description" content="MY DOCTOR provides professional healthcare services for your well-being. Located East Africa, Tanzania.">
     <meta property="og:image" content="{{ url('img/logo-dr.png') }}">
     <meta property="og:url" content="{{ url('/') }}">
     <meta property="og:type" content="website">
