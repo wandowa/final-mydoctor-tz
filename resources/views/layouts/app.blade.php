@@ -84,19 +84,27 @@
         document.addEventListener("DOMContentLoaded", function () {
             const preloader = document.getElementById('preloader');
             const currentRoute = window.location.pathname;
-
-            if (currentRoute === '/') {
-                setTimeout(() => {
-                    preloader.classList.add('fade-out');
-                }, 2500); // Start fade-out
-                setTimeout(() => {
-                    preloader.classList.add('hidden');
-                }, 3500); // Hide fully after transition
+    
+            // Check if we're on the home route
+            if (currentRoute === '/' || currentRoute === '/home') {
+                // First, wait for the page to fully load
+                window.addEventListener('load', function() {
+                    // Then wait for any potential async content to load
+                    setTimeout(() => {
+                        preloader.classList.add('fade-out');
+                        
+                        // Hide fully after transition completes
+                        setTimeout(() => {
+                            preloader.classList.add('hidden');
+                        }, 1000); // Should match your CSS transition duration
+                    }, 1000); // Additional buffer time after page load
+                });
             } else {
+                // For other routes, hide immediately
                 preloader.classList.add('hidden');
             }
         });
-
+    
         // Scroll to Top Button
         const topUpButton = document.getElementById('topUpButton');
         topUpButton.addEventListener('click', () => {

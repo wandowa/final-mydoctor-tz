@@ -124,7 +124,7 @@
     </section>
 
     <!-- mans the rest of the code remains unchanged, as requested.
-    <!-- Why Partnership with Us Section -->
+    <!- Why Partnership with Us Section -->
     <section class="py-12 sm:py-16 bg-white dark:bg-gray-900">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 dark:text-white text-center mb-8 sm:mb-12">Why Partnership with Us?</h2>

@@ -8,9 +8,11 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-10">
             <!-- Picture and Intro Text -->
             <div class="flex flex-col md:flex-row items-center md:space-x-8 space-y-6 md:space-y-0">
-                <!-- Picture - Original desktop style maintained -->
+                <!-- Picture - Modified with controlled height -->
                 <div class="w-full md:w-1/2 mb-1 md:mb-0">
-                    <img src="{{ $about ? Storage::url($about->image) : url('img/about-us.jpg') }}" alt="About Us Image" class="w-full rounded-lg shadow-lg object-cover">
+                    <img src="{{ $about ? Storage::url($about->image) : url('img/about-us.jpg') }}" 
+                         alt="About Us Image" 
+                         class="w-full h-80 md:h-96 rounded-lg shadow-lg object-cover object-center">
                 </div>
                 <!-- Intro Text -->
                 <div class="w-full md:w-1/2 text-center md:text-left">
@@ -96,7 +98,9 @@
                 <div class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 gap-6">
                     @forelse($teamMembers as $member)
                         <div class="relative group overflow-hidden rounded-lg shadow-lg">
-                            <img src="{{ Storage::url($member->image) }}" alt="{{ $member->name }}" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105">
+                            <img src="{{ Storage::url($member->image) }}" 
+                                 alt="{{ $member->name }}" 
+                                 class="w-full h-72 md:h-80 object-cover transition-transform duration-300 group-hover:scale-105">
                             <div class="absolute inset-0 bg-green-400 bg-opacity-0 group-hover:bg-opacity-75 flex items-center justify-center transition-all duration-300">
                                 <div class="text-center text-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-2">
                                     <h3 class="text-lg sm:text-xl font-semibold">{{ $member->name }}</h3>
