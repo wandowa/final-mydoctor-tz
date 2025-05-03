@@ -35,26 +35,33 @@
                             <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Select Donation Amount</label>
                             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                 <label class="relative bg-gray-100 dark:bg-gray-700 p-4 rounded-md cursor-pointer hover:bg-green-50 dark:hover:bg-green-400 transition duration-300 border border-gray-300 dark:border-gray-600">
-                                    <input type="radio" name="amount" value="50" class="absolute opacity-0 peer" required>
+                                    <input type="radio" value="50" class="absolute opacity-0 peer" required>
                                     <div class="text-center">
                                         <span class="text-lg font-semibold text-gray-800 dark:text-white peer-checked:text-green-800">$50</span>
                                         <p class="text-xs text-gray-500 dark:text-gray-400">Basic Support</p>
                                     </div>
                                 </label>
                                 <label class="relative bg-gray-100 dark:bg-gray-700 p-4 rounded-md cursor-pointer hover:bg-green-50 dark:hover:bg-green-800 transition duration-300 border border-gray-300 dark:border-gray-600">
-                                    <input type="radio" name="amount" value="100" class="absolute opacity-0 peer" required>
+                                    <input type="radio" value="100" class="absolute opacity-0 peer" required>
                                     <div class="text-center">
                                         <span class="text-lg font-semibold text-gray-800 dark:text-white peer-checked:text-green-800">$100</span>
                                         <p class="text-xs text-gray-500 dark:text-gray-400">Community Impact</p>
                                     </div>
                                 </label>
                                 <label class="relative bg-gray-100 dark:bg-gray-700 p-4 rounded-md cursor-pointer hover:bg-green-50 dark:hover:bg-green-400 transition duration-300 border border-gray-300 dark:border-gray-600">
-                                    <input type="radio" name="amount" value="200" class="absolute opacity-0 peer" required>
+                                    <input type="radio" value="200" class="absolute opacity-0 peer" required>
                                     <div class="text-center">
                                         <span class="text-lg font-semibold text-gray-800 dark:text-white peer-checked:text-green-800">$200</span>
                                         <p class="text-xs text-gray-500 dark:text-gray-400">Major Contribution</p>
                                     </div>
                                 </label>
+                                {{-- <label class="relative bg-gray-100 dark:bg-gray-700 p-4 rounded-md cursor-pointer hover:bg-green-50 dark:hover:bg-green-400 transition duration-300 border border-gray-300 dark:border-gray-600">
+                                    <input type="radio" name="amount" value="200" class="absolute opacity-0 peer" required>
+                                    <div class="text-center">
+                                        <span class="text-lg font-semibold text-gray-800 dark:text-white peer-checked:text-green-800">$200</span>
+                                        <p class="text-xs text-gray-500 dark:text-gray-400">Major Contribution</p>
+                                    </div>
+                                </label> --}}
                             </div>
                         </div>
                         <!-- Custom Amount -->
@@ -70,19 +77,53 @@
                         </div>
                         <!-- Submit Button -->
                         <div>
-                            <button type="submit" class="w-full px-6 py-3 bg-green-400 text-black rounded-md font-semibold hover:bg-blue-400 transition duration-300 shadow-md flex items-center justify-center gap-2">
+                            <button onclick="toggleModal()" class="w-full px-6 py-3 bg-green-400 text-black rounded-md font-semibold hover:bg-blue-400 transition duration-300 shadow-md flex items-center justify-center gap-2">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
                                 </svg>
                                 Donate Now
                             </button>
                         </div>
+
+                        <!-- Modal (Hidden by default) -->
+                        <div id="modal" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50">
+                            <div class="bg-white dark:bg-gray-900 p-6 sm:p-8 rounded-lg shadow-xl max-w-md w-full text-center relative">
+                                <!-- Close Button -->
+                                <button onclick="toggleModal()" class="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-2xl font-bold">
+                                    ×
+                                </button>
+                                <!-- Contact Button -->
+                                <div class="mb-6">
+                                    <a href="{{ url('/contact-us') }}" class="inline-block w-full px-6 py-3 bg-green-400 text-black rounded-md font-semibold hover:bg-blue-400 transition duration-300 shadow-md text-base sm:text-lg">
+                                        Contact Us to Contribute
+                                    </a>
+                                    <p class="mt-4 text-sm sm:text-base text-gray-600 dark:text-gray-300">
+                                        Or reach us at:
+                                        <a href="mailto:mydoctor.tz@gmail.com" class="underline hover:text-green-500">mydoctor.tz@gmail.com</a> |
+                                        <a href="tel:+255759042291" class="underline hover:text-green-500">+255 759 042 291</a>
+                                    </p>
+                                </div>
+                                <!-- Image -->
+                                <img src="{{ asset('img/under-construction.png') }}" alt="Under Construction" class="w-full max-w-xs sm:max-w-sm mx-auto h-auto mb-4">
+                                <p class="text-lg sm:text-xl font-semibold text-gray-700 dark:text-white">This page is under construction.</p>
+                            </div>
+                        </div>
+
+                        <!-- JavaScript for Modal Toggle -->
+                        <script>
+                            function toggleModal() {
+                                const modal = document.getElementById('modal');
+                                modal.classList.toggle('hidden');
+                                modal.classList.toggle('flex');
+                            }
+                        </script>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- mans the rest of the code remains unchanged, as requested.
     <!-- Why Partnership with Us Section -->
     <section class="py-12 sm:py-16 bg-white dark:bg-gray-900">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -96,7 +137,7 @@
                 @endforeach
             </div>
             <div class="text-center mt-8 sm:mt-12">
-                <a href="#donate" class="inline-block px-6 sm:px-8 py-3 bg-green-400 text-black rounded-md font-semibold hover:bg-blue-400 transition duration-300 shadow-md text-sm sm:text-base">Learn More & Partner</a>
+                <a href="#booking" class="inline-block px-6 sm:px-8 py-3 bg-green-400 text-black rounded-md font-semibold hover:bg-blue-400 transition duration-300 shadow-md text-sm sm:text-base">Learn More & Partner</a>
             </div>
         </div>
     </section>
@@ -120,7 +161,7 @@
                                 <input type="hidden" name="project_id" value="{{ $project->id }}">
                                 <input type="hidden" name="amount" value="100">
                                 <input type="hidden" name="currency" value="USD">
-                                <button type="submit" class="px-6 py-3 bg-green-400 text-black rounded-md font-semibold hover:bg-blue-400 transition duration-300 shadow-md text-sm sm:text-base">Donate Now</button>
+                                <button type="submit" onclick="toggleModal(); event.preventDefault();" class="px-6 py-3 bg-green-400 text-black rounded-md font-semibold hover:bg-blue-400 transition duration-300 shadow-md text-sm sm:text-base">Donate Now</button>
                             </form>
                         </div>
                     @else
@@ -133,7 +174,7 @@
                                 <input type="hidden" name="project_id" value="{{ $project->id }}">
                                 <input type="hidden" name="amount" value="100">
                                 <input type="hidden" name="currency" value="USD">
-                                <button type="submit" class="px-6 py-3 bg-green-400 text-black rounded-md font-semibold hover:bg-blue-400 transition duration-300 shadow-md text-sm sm:text-base">Donate Now</button>
+                                <button type="submit" onclick="toggleModal(); event.preventDefault();" class="px-6 py-3 bg-green-400 text-black rounded-md font-semibold hover:bg-blue-400 transition duration-300 shadow-md text-sm sm:text-base">Donate Now</button>
                             </form>
                         </div>
                         <!-- Right Image -->
