@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -27,62 +28,35 @@
     @apply block;
   }
 }
-/* <!-- Tailwind CSS Animation --> */
-        @keyframes infinite-slide {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-        .animate-infinite-slide {
-            animation: infinite-slide 20s linear infinite;
-        }
 
+@layer utilities {
+  /* Infinite slide animation */
+  .animate-infinite-slide {
+    animation: infinite-slide 20s linear infinite;
+  }
+  
+  /* Scroll animation */
+  .animate-scroll {
+    animation: scroll 10s linear infinite;
+  }
+  
+  /* Stethoscope animation */
+  .animate-stethoscope {
+    animation: stethoscopeScan 4s linear infinite;
+  }
+}
 
-        /* <!-- Preloader Animations -->
-
-            /* Heartbeat Pulse Animation for Logo */
-            /* @keyframes pulse-heart {
-                0%, 100% { transform: scale(1); }
-                50% { transform: scale(1.1); }
-            }
-            .animate-pulse-heart {
-                animation: pulse-heart 1.5s infinite ease-in-out;
-            } */
-    
-            /* Heartbeat Line Animation */
-            /* @keyframes heartbeat {
-                0% { stroke-dasharray: 0 100; stroke-dashoffset: 0; }
-                50% { stroke-dasharray: 100 0; stroke-dashoffset: 0; }
-                100% { stroke-dasharray: 100 0; stroke-dashoffset: -100; }
-            }
-            .animate-heartbeat {
-                stroke-dasharray: 100;
-                animation: heartbeat 2s infinite linear;
-            } */
-    
-            /* Bounce Animation for Dots */
-            /* @keyframes bounce {
-                0%, 100% { transform: translateY(0); }
-                50% { transform: translateY(-10px); }
-            }
-            .animate-bounce {
-                animation: bounce 1s infinite;
-            }
-            .delay-0 { animation-delay: 0s; }
-            .delay-200 { animation-delay: 0.2s; }
-            .delay-400 { animation-delay: 0.4s; } */ 
-
-            /* <!-- Animation Styles on Portfolio --> */
+@keyframes infinite-slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
 @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
-  .animate-scroll {
-    animation: scroll 10s linear infinite;
+
+@keyframes stethoscopeScan {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
-    
-     
