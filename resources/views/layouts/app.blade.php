@@ -19,6 +19,7 @@
     <meta name="twitter:image" content="{{ url('img/logo-dr.png') }}">
     <title>MY DOCTOR | @yield('title')</title>
     <link rel="icon" href="{{ url('img/logo-dr.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
