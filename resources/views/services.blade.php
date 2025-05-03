@@ -119,9 +119,10 @@
                     @endforelse
                 </div>
             </div>
+            
             <!-- View All Button -->
             <div class="mt-8 text-center">
-                <a href="{{ route('services') }}" class="inline-block px-8 py-3 bg-green-400 text-black rounded-full font-semibold hover:bg-blue-400 transition duration-300 shadow-md">View All</a>
+                <a href="https://www.instagram.com/mydoctor.tz/" target="_blank" class="inline-block px-8 py-3 bg-green-400 text-black rounded-full font-semibold hover:bg-blue-400 transition duration-300 shadow-md">View All</a>
             </div>
         </div>
     </section>
