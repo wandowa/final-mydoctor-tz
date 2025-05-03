@@ -27,7 +27,7 @@
     <!-- Non-blocking CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
           crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="{{ mix('resources/css/app.css') }}" media="print" onload="this.media='all'">
+    @vite(['resources/css/app.css'])
 
     <style>
         /* Critical CSS - Load immediately */
