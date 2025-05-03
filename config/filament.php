@@ -68,6 +68,10 @@ return [
     | After changing the path, you should run `php artisan filament:cache-components`.
     |
     */
+    'auth' => [
+    'guard' => 'web', // Should match Laravel's auth guard
+    'provider' => 'users', // Should match config/auth.php
+     ],
 
     'cache_path' => base_path('bootstrap/cache/filament'),
 
