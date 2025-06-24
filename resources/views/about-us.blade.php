@@ -26,8 +26,8 @@
         ];
     @endphp
 
-    <!-- About Us Section -->
-    <section class="bg-gray-100 dark:bg-gray-800 py-8 sm:py-12">
+    <!-- About Us Section with header spacing -->
+    <section class="bg-gray-100 dark:bg-gray-800 py-8 sm:py-12 pt-20 sm:pt-24">
         <div class="container mx-auto px-4 sm:px-6 lg:px-10">
             <!-- Picture and Intro Text -->
             <div class="flex flex-col md:flex-row items-center md:space-x-8 space-y-6 md:space-y-0">
