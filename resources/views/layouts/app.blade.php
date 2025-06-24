@@ -22,23 +22,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <!-- Add this CSS to your main layout file (layouts/app.blade.php) in the head section -->
-<style>
-    /* Global body padding to prevent header overlap */
-    body {
-        padding-top: 88px; /* Header height + some buffer */
-    }
-    
-    @media (max-width: 768px) {
-        body {
-            padding-top: 80px; /* Slightly less padding on mobile */
-        }
-    }
-    
-    /* Optional: Smooth scroll behavior */
-    html {
-        scroll-behavior: smooth;
-    }
-</style>
 </head>
 
 <body class="antialiased bg-gray-100 text-gray-900 min-h-screen flex flex-col">
