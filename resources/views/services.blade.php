@@ -25,45 +25,66 @@
             <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8">Our <span class="text-blue-400">Services</span></h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 @forelse($services as $service)
-                <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-green-400 hover:text-white dark:hover:bg-gray-800 group">
-                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2 group-hover:text-white">
+                <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-green-400 dark:hover:bg-gray-800 group">
+                    <img src="{{ $service->image ? Storage::url($service->image) : url('img/default-service.jpg') }}" 
+                         alt="{{ $service->title }}" 
+                         class="w-full h-56 object-cover mb-4 rounded group-hover:opacity-90">
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2 group-hover:text-black">
                         {{ $service->title }}
                     </h3>
-                    <p class="text-gray-600 dark:text-gray-300 group-hover:text-white">
+                    <p class="text-gray-600 dark:text-gray-300 group-hover:text-black">
                         {{ $service->description }}
                     </p>
                 </div>
                 
                 @empty
                     <!-- Service 1 -->
-                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-green-400 dark:hover:bg-gray-800">
-                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Medical Education</h3>
-                        <p class="text-gray-600 dark:text-gray-300">Empowering our community with knowledge through health workshops and training programs.</p>
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-green-400 dark:hover:bg-gray-800 group">
+                        <img src="{{ url('img/default-service.jpg') }}" 
+                             alt="Medical Education" 
+                             class="w-full h-56 object-cover mb-4 rounded group-hover:opacity-90">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2 group-hover:text-black">Medical Education</h3>
+                        <p class="text-gray-600 dark:text-gray-300 group-hover:text-black">Empowering our community with knowledge through health workshops and training programs.</p>
                     </div>
                     <!-- Service 2 -->
-                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-green-400 dark:hover:bg-gray-800">
-                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Emergency Care</h3>
-                        <p class="text-gray-600 dark:text-gray-300">24/7 emergency services with rapid response and expert medical attention.</p>
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-green-400 dark:hover:bg-gray-800 group">
+                        <img src="{{ url('img/default-service.jpg') }}" 
+                             alt="Emergency Care" 
+                             class="w-full h-56 object-cover mb-4 rounded group-hover:opacity-90">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2 group-hover:text-black">Emergency Care</h3>
+                        <p class="text-gray-600 dark:text-gray-300 group-hover:text-black">24/7 emergency services with rapid response and expert medical attention.</p>
                     </div>
                     <!-- Service 3 -->
-                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-green-400 dark:hover:bg-gray-800">
-                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Surgical Services</h3>
-                        <p class="text-gray-600 dark:text-gray-300">Advanced surgical procedures performed by our skilled specialists.</p>
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-green-400 dark:hover:bg-gray-800 group">
+                        <img src="{{ url('img/default-service.jpg') }}" 
+                             alt="Surgical Services" 
+                             class="w-full h-56 object-cover mb-4 rounded group-hover:opacity-90">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2 group-hover:text-black">Surgical Services</h3>
+                        <p class="text-gray-600 dark:text-gray-300 group-hover:text-black">Advanced surgical procedures performed by our skilled specialists.</p>
                     </div>
                     <!-- Service 4 -->
-                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-green-400 dark:hover:bg-gray-800">
-                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Pediatric Care</h3>
-                        <p class="text-gray-600 dark:text-gray-300">Specialized care for children, ensuring their health and well-being.</p>
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-green-400 dark:hover:bg-gray-800 group">
+                        <img src="{{ url('img/default-service.jpg') }}" 
+                             alt="Pediatric Care" 
+                             class="w-full h-56 object-cover mb-4 rounded group-hover:opacity-90">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2 group-hover:text-black">Pediatric Care</h3>
+                        <p class="text-gray-600 dark:text-gray-300 group-hover:text-black">Specialized care for children, ensuring their health and well-being.</p>
                     </div>
                     <!-- Service 5 -->
-                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-green-400 dark:hover:bg-gray-800">
-                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Diagnostic Imaging</h3>
-                        <p class="text-gray-600 dark:text-gray-300">State-of-the-art imaging services including MRI, CT, and X-rays.</p>
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-green-400 dark:hover:bg-gray-800 group">
+                        <img src="{{ url('img/default-service.jpg') }}" 
+                             alt="Diagnostic Imaging" 
+                             class="w-full h-56 object-cover mb-4 rounded group-hover:opacity-90">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2 group-hover:text-black">Diagnostic Imaging</h3>
+                        <p class="text-gray-600 dark:text-gray-300 group-hover:text-black">State-of-the-art imaging services including MRI, CT, and X-rays.</p>
                     </div>
                     <!-- Service 6 -->
-                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-green-400 dark:hover:bg-gray-800">
-                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Rehabilitation Therapy</h3>
-                        <p class="text-gray-600 dark:text-gray-300">Comprehensive therapy programs to support recovery and mobility.</p>
+                    <div class="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-green-400 dark:hover:bg-gray-800 group">
+                        <img src="{{ url('img/default-service.jpg') }}" 
+                             alt="Rehabilitation Therapy" 
+                             class="w-full h-56 object-cover mb-4 rounded group-hover:opacity-90">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2 group-hover:text-black">Rehabilitation Therapy</h3>
+                        <p class="text-gray-600 dark:text-gray-300 group-hover:text-black">Comprehensive therapy programs to support recovery and mobility.</p>
                     </div>
                 @endforelse
             </div>

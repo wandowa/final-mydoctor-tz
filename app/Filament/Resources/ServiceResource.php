@@ -23,6 +23,9 @@ class ServiceResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('title')
                     ->required(),
+                Forms\Components\FileUpload::make('image')
+                    ->image()
+                    ->required(),
                 Forms\Components\Textarea::make('description')
                     ->required()
                     ->rows(3),
@@ -34,6 +37,7 @@ class ServiceResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title'),
+                Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('description')
                     ->limit(50),
             ])
